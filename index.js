@@ -14,3 +14,9 @@ const tutorials = [
 const titleCased = () => {
   return tutorials
 }
+
+const newTutorials = tutorials.map(newTutorial=>newTutorial[0].toUpperCase()+ tutorials.includes(1))
+
+
+
+console.log (newTutorials)
