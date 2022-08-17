@@ -12,11 +12,24 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let newArr = []
+
+  let items = tutorials.map(tutorial=>{
+      // console.log(tutorial);
+      // console.log(tutorial.split(' '))
+      let newItem = tutorial.split(' ').map(item1=>{
+        // console.log (item1)
+        return item1.charAt(0).toUpperCase() + item1.slice(1)
+      
+      })
+      let newItem1 = newItem.join(' ')
+      // console.log(newItem1)
+      newArr.push(newItem1)
+
+  })
+  return newArr
+  
 }
-
-const newTutorials = tutorials.map(newTutorial=>newTutorial[0].toUpperCase()+ tutorials.includes(1))
-
+titleCased()
 
 
-console.log (newTutorials)
